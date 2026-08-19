@@ -62,3 +62,4 @@ Os checks de produto continuam pendentes até a implementação.
 - [x] mobile em 390 px sem overflow horizontal;
 - [x] screenshots de produção em `docs/qa-production-desktop.png` e `docs/qa-production-mobile.png`;
 - [x] URL pública: `https://relay-openai-hackathon.vercel.app`.
+- [x] take-base de 22 segundos em MP4 validado por `ffprobe`.

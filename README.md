@@ -4,6 +4,8 @@
 
 [Demo pública](https://relay-openai-hackathon.vercel.app) · [Brand book](docs/BRAND_BOOK.md) · [Roteiro do vídeo](docs/DEMO_SCRIPT.md)
 
+[Take-base automático do fluxo (22s, sem narração)](docs/relay-demo-raw.mp4)
+
 ![Visão operacional da Relay](docs/qa-production-desktop.png)
 
 ## O problema
