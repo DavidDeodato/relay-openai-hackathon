@@ -6,21 +6,6 @@ Nenhuma tarefa de branding. A próxima frente é implementação do produto.
 
 ## Próximas
 
-### TASK-002 — Criar o repositório novo e o esqueleto
-
-- Janela-alvo: 10 minutos após o GO.
-- Pronto: Next.js executa localmente; variáveis requeridas documentadas; nenhum ativo PEQK presente.
-
-### TASK-003 — Implementar a mente operacional ponta a ponta
-
-- Janela-alvo: 45 minutos.
-- Pronto: centralizar três fontes, compilar memória, gerar briefing, aprovar ação, perguntar com fonte e gerar onboarding.
-
-### TASK-005 — Validar e publicar
-
-- Janela-alvo: 20 minutos.
-- Pronto: build, browser smoke desktop/mobile, console, banco e API verificados; Vercel público.
-
 ### TASK-006 — Gravar a demonstração e fechar submissão
 
 - Janela-alvo: 25 minutos, com buffer final de 15 minutos.
@@ -45,3 +30,6 @@ Nenhuma tarefa de branding. A próxima frente é implementação do produto.
   - Evidência: `docs/BRAND_BOOK.md`, `docs/BRAND_ASSET_MANIFEST.md`, `brand/relay-brand-board.html` e `public/brand/`.
   - Revisão: duas tentativas 2D intermediárias foram reprovadas antes da arquitetura final do Laço Vivo.
 - TASK-004 — Branding mínimo produzido e pronto para aplicação no produto.
+- TASK-002 — Repositório público e aplicação Next.js criados.
+- TASK-003 — Fluxo fontes → memória → conflito → ação → handoff implementado.
+- TASK-005 — Build, API OpenAI, desktop/mobile e produção Vercel validados.

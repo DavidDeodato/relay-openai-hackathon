@@ -57,3 +57,12 @@ Ainda não existem. Não declarar aplicação funcional até os checks do `QA_BA
 - Sistema documentado: `docs/BRAND_BOOK.md`.
 - Avaliação integrada: `brand/relay-brand-board.html`.
 - Regra de escala: ilustração a partir de 96 px; símbolo/ícone abaixo disso.
+
+## EVD-008 — Plataforma Relay publicada
+
+- Produção: `https://relay-openai-hackathon.vercel.app`.
+- Repositório público: `https://github.com/DavidDeodato/relay-openai-hackathon`.
+- Fluxo validado: três fontes → briefing/memória → conflito → ação aprovada → handoff.
+- OpenAI Responses API validada em produção com resposta `mode=live`.
+- Checks: build Next.js, TypeScript, lint, teste de contrato, HTTP 200, desktop e mobile.
+- Nenhum arquivo de segredo rastreado; somente `.env.example` está no Git.

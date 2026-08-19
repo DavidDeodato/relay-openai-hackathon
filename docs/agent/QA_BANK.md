@@ -48,3 +48,17 @@ Os checks de produto continuam pendentes até a implementação.
 - [x] textos e cores principais possuem contraste documentado;
 - [x] ativo completo e ícone de pequena escala estão separados;
 - [x] arquivos rejeitados não foram copiados para `public/brand/`.
+
+## QA da plataforma — 2026-08-19
+
+- [x] `npm test`: build Next.js, TypeScript e contrato do fluxo passaram;
+- [x] `npm run lint`: zero erros;
+- [x] home de produção respondeu HTTP 200;
+- [x] `/api/ask` respondeu em modo `live` com a OpenAI;
+- [x] seleção de fonte atualiza o inspetor;
+- [x] aprovação altera o estado e persiste após reload;
+- [x] handoff abre com objetivo, decisão, risco, pendência e próximo passo;
+- [x] browser desktop sem erro de console, página ou request;
+- [x] mobile em 390 px sem overflow horizontal;
+- [x] screenshots de produção em `docs/qa-production-desktop.png` e `docs/qa-production-mobile.png`;
+- [x] URL pública: `https://relay-openai-hackathon.vercel.app`.
