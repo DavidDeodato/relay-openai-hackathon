@@ -1,4 +1,4 @@
-/* eslint-disable @next/next/no-img-element, jsx-a11y/no-static-element-interactions, jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable @next/next/no-img-element, jsx-a11y/no-static-element-interactions, jsx-a11y/no-noninteractive-element-interactions, react-hooks/immutability */
 "use client";
 
 import { useEffect, useState } from "react";
@@ -282,21 +282,55 @@ export default function RelayAppV2() {
   }
   async function sync() {
     setBusy(true);
-    await fetch("/api/ingest", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        kind: "slack",
-        name: "#projeto-atlas · lote de demonstração",
-        synthetic: true,
-        content:
-          "Evento sintético recebido do Slack: o piloto segue na sexta; CSV está fora e o schema do parceiro segue pendente.",
-      }),
-    });
-    await refreshContext();
-    setSyncLabel("agora");
-    setBusy(false);
-    setToast("4 conectores consultados · contexto assimilado");
+    try {
+      const latest = await fetch(
+        "https://api.github.com/repos/DavidDeodato/relay-openai-hackathon/commits?per_page=1",
+      ).then((response) => response.json());
+      const commit = latest[0] as {
+        sha: string;
+        html_url: string;
+        commit: { message: string; author: { date: string } };
+      };
+      const inputs = [
+        {
+          kind: "github",
+          name: `DavidDeodato/relay-openai-hackathon · ${commit.sha.slice(0, 7)}`,
+          synthetic: false,
+          content: `Commit público real em ${commit.commit.author.date}: ${commit.commit.message}. Origem: ${commit.html_url}`,
+        },
+        {
+          kind: "slack",
+          name: "#projeto-atlas · lote de demonstração",
+          synthetic: true,
+          content:
+            "Evento sintético recebido do Slack: o piloto segue na sexta; CSV está fora e o schema do parceiro segue pendente.",
+        },
+      ];
+      const assimilated = await Promise.all(
+        inputs.map((input) =>
+          fetch("/api/ingest", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(input),
+          }).then((response) => response.json()),
+        ),
+      );
+      setSources((current) => [
+        ...assimilated.map((item) => item.source),
+        ...current,
+      ]);
+      setMemories((current) => [
+        ...assimilated.flatMap((item) => item.memories || []),
+        ...current,
+      ]);
+      setSelected(assimilated[0].source);
+      setSyncLabel("agora");
+      setToast("GitHub público + Slack demo assimilados");
+    } catch {
+      setToast("Sincronização falhou; nenhuma fonte foi promovida");
+    } finally {
+      setBusy(false);
+    }
   }
   function approve() {
     setApproved(true);
@@ -936,8 +970,9 @@ function Integrations({
           <span className="eyebrow">ENTRADAS DE CONTEXTO</span>
           <h2>Integrações</h2>
           <p>
-            Na demo, Slack entrega eventos sintéticos realistas. O processamento
-            posterior é executado pela Relay.
+            GitHub consulta o repositório público em tempo real. Slack entrega
+            eventos sintéticos realistas. Toda assimilação posterior é executada
+            pela Relay.
           </p>
         </div>
         <button className="primary-button" disabled={busy} onClick={sync}>
