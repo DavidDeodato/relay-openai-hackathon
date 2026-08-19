@@ -792,7 +792,7 @@ function Sources({
   add: () => void;
 }) {
   return (
-    <div className="page-surface">
+    <div className="page-surface sources-page">
       <div className="page-intro">
         <div>
           <span className="eyebrow">PROVENIÊNCIA</span>
@@ -805,6 +805,26 @@ function Sources({
         <button className="primary-button" onClick={add}>
           Adicionar contexto
         </button>
+      </div>
+      <div className="source-kpis">
+        <div>
+          <strong>{sources.length}</strong>
+          <span>fontes assimiladas</span>
+        </div>
+        <div>
+          <strong>
+            {sources.filter((source) => !source.synthetic).length}
+          </strong>
+          <span>fontes públicas reais</span>
+        </div>
+        <div>
+          <strong>{sources.filter((source) => source.synthetic).length}</strong>
+          <span>entradas sintéticas</span>
+        </div>
+        <div>
+          <strong>100%</strong>
+          <span>com Trace ID</span>
+        </div>
       </div>
       <div className="split-view">
         <div className="data-table">
