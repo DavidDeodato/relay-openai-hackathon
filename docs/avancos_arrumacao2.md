@@ -2,6 +2,8 @@
 
 Atualizado continuamente em 2026-08-19. O status **OK PARA GRAVAR** só aparece depois de build e smoke funcional.
 
+Produção validada: `https://relay-openai-hackathon.vercel.app` · commit `59f9ee2`.
+
 ## Blocos
 
 - [x] **BLOCO 1 — visão operacional atual:** OK PARA GRAVAR. Mostra três fontes sintéticas recebidas (Slack, GitHub e documento), memória consolidada, conflito rastreável e ação humana aprovável.
@@ -23,6 +25,16 @@ Depois grave **Pergunte à Relay → Nova conversa → duas perguntas → Nova c
 - Slack usa dados sintéticos recebidos pelo conector de demonstração.
 - A assimilação, extração de memória, relação chat/mensagens e resposta contextual são executadas pela plataforma.
 - No desenvolvimento, o armazenamento server-side é JSON persistente. Na Vercel, sem banco gerenciado configurado, o backend usa memória efêmera e a demonstração deve ocorrer na mesma instância/sessão.
+
+## Evidência final desta rodada
+
+- `npm run lint`: passou.
+- `npm test`: build, TypeScript e contrato passaram.
+- Produção: HTTP 200.
+- Produção: ingestão gerou 3 memórias em modo OpenAI `live`.
+- Produção: conversa foi criada, mensagem relacionada por `chatId` foi persistida na instância e a resposta citou a fonte assimilada.
+- Browser de produção: Integrações e Nova conversa abriram; nenhum erro de console.
+- P0 encontrado e corrigido antes da liberação: incompatibilidade ESM/CommonJS das rotas serverless na Vercel.
 
 ## Regra para quem grava
 
