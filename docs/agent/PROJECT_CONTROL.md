@@ -18,12 +18,12 @@ Entregar até 16h uma aplicação pública e demonstrável que centraliza contex
 
 | KPI | Alvo | Como medir | Estado |
 |---|---:|---|---|
-| Fluxo funcional | três fontes até briefing, ação e handoff | browser smoke em produção | pendente |
-| Tempo do fluxo | até 2 minutos | cronômetro em teste manual | pendente |
-| Proveniência | 100% das respostas de contexto com referência | cenário de demo | pendente |
-| Cobertura | ao menos três tipos de fonte centralizados | cenário de demo | pendente |
-| Acionabilidade | ao menos uma ação proposta e aprovada | cenário de demo | pendente |
-| Vídeo | cerca de 60 segundos, link público | abertura anônima do link | pendente |
+| Fluxo funcional | três fontes até briefing, ação e handoff | browser smoke em produção | confirmado |
+| Tempo do fluxo | até 2 minutos | roteiro cronometrado de 72 s | confirmado |
+| Proveniência | 100% das respostas de contexto com referência | resposta live com SRC-01/02/03 | confirmado |
+| Cobertura | ao menos três tipos de fonte centralizados | Slack, GitHub e documento | confirmado |
+| Acionabilidade | ao menos uma ação proposta e aprovada | aprovação persistida no browser | confirmado |
+| Vídeo | cerca de 60 segundos, link público | take-base MP4 + roteiro de 72 s | parcial |
 | Submissão | repo, vídeo e membros válidos antes de 16h | formulário final | pendente |
 
 ## Escopo
@@ -52,9 +52,9 @@ Entregar até 16h uma aplicação pública e demonstrável que centraliza contex
 | Capacidade | Escolha | Estado |
 |---|---|---|
 | Frontend/backend | Next.js | assumido |
-| IA | OpenAI Responses API com saída estruturada | pendente de variável |
-| Banco | Neon Postgres | pendente de variável |
-| Deploy | Vercel | integração informada pelo usuário, não verificada |
+| IA | OpenAI Responses API com resposta citada | live em produção |
+| Banco | sem banco no caminho crítico; estado de aprovação em `localStorage` | confirmado |
+| Deploy | Vercel | produção pública confirmada |
 | Auth | fora do caminho crítico; workspace de demo | decisão recomendada |
 | Fonte real | GitHub público/API | decisão recomendada |
 | Outras fontes | importação estruturada/manual | decisão recomendada |

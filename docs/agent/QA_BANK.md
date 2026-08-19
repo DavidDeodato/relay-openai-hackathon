@@ -32,7 +32,7 @@
 
 ## Estado atual
 
-Os checks de produto continuam pendentes até a implementação.
+O caminho crítico definido para a demo está validado. Os itens do smoke original ligados a importação, edição de prévia e publicação de cápsula foram retirados do escopo do MVP quando o produto convergiu para a visão operacional centralizada; não são evidência exigida para esta entrega.
 
 ## QA de branding — 2026-08-19
 
@@ -55,6 +55,7 @@ Os checks de produto continuam pendentes até a implementação.
 - [x] `npm run lint`: zero erros;
 - [x] home de produção respondeu HTTP 200;
 - [x] `/api/ask` respondeu em modo `live` com a OpenAI;
+- [x] chat secundário enviou pergunta livre e recebeu resposta contextual citando `SRC-01`, `SRC-02` e `SRC-03`;
 - [x] seleção de fonte atualiza o inspetor;
 - [x] aprovação altera o estado e persiste após reload;
 - [x] handoff abre com objetivo, decisão, risco, pendência e próximo passo;

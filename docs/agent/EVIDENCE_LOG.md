@@ -29,7 +29,7 @@
 
 ## Evidências de implementação
 
-Ainda não existem. Não declarar aplicação funcional até os checks do `QA_BANK.md` passarem.
+As evidências atuais estão registradas em EVD-008 e no `QA_BANK.md`. A aplicação só foi promovida após build, lint, smoke de browser, API live, console limpo e abertura da URL pública.
 
 ## EVD-005 — Falha visual registrada
 
@@ -64,5 +64,6 @@ Ainda não existem. Não declarar aplicação funcional até os checks do `QA_BA
 - Repositório público: `https://github.com/DavidDeodato/relay-openai-hackathon`.
 - Fluxo validado: três fontes → briefing/memória → conflito → ação aprovada → handoff.
 - OpenAI Responses API validada em produção com resposta `mode=live`.
+- Chat secundário validado em produção: pergunta livre, estado de carregamento e resposta citada com `SRC-01`, `SRC-02` e `SRC-03`.
 - Checks: build Next.js, TypeScript, lint, teste de contrato, HTTP 200, desktop e mobile.
 - Nenhum arquivo de segredo rastreado; somente `.env.example` está no Git.
