@@ -1,0 +1,59 @@
+# Evidence Log
+
+## EVD-001 — Fonte do pedido
+
+- Transcrição escrita fornecida pelo usuário.
+- Áudio local de 244 segundos transcrito em português.
+- Fato consolidado: pequenas equipes perdem contexto em canais e chats pessoais; o usuário propôs um protocolo portátil como ponto de integração.
+- Correção material do usuário: a tese principal é a centralização útil do contexto desestruturado da empresa; chat é incremento de cobertura, não produto central.
+
+## EVD-002 — Auditoria da referência histórica
+
+- Repositórios: `DavidDeodato/peaqle`, `DavidDeodato/peeqle-app`, `DavidDeodato/peeqle-sync-test`.
+- Clone local isolado: `C:\Users\lucas\Desktop\projetos\hackathon-peaqle-reference`.
+- Capacidades observadas: Next.js, Prisma/Postgres, OpenAI, Cloudinary, auth, Slack/GitHub, base de conhecimento, agentes e recrutamento.
+- Limitações observadas: busca lexical com fallback irrelevante possível, tokens chamados de encrypted sem criptografia visível, ingestão de mensagens sem revisão, muitas superfícies de UI e recrutamento incompatível com o guia.
+
+## EVD-003 — Regras do evento
+
+- Prazo informado: 16h.
+- Repo público e vídeo de aproximadamente um minuto.
+- Demo deve evidenciar somente trabalho do evento.
+- Proibidos: RAG básico, Streamlit, triagem de candidatos e dashboard como função principal, entre outros itens listados no guia.
+
+## EVD-004 — Evidência de mercado
+
+- Microsoft Work Trend Index 2023: 57% do tempo no Microsoft 365 em comunicação.
+- Atlassian State of Teams 2024: 55% relatam dificuldade para localizar informação; 50% encontraram duplicidade tardia de trabalho.
+- Páginas oficiais de Notion AI e Slack confirmam oferta atual de busca corporativa conectada.
+
+## Evidências de implementação
+
+Ainda não existem. Não declarar aplicação funcional até os checks do `QA_BANK.md` passarem.
+
+## EVD-005 — Falha visual registrada
+
+- Arquivo rejeitado: `C:\Users\lucas\.codex\generated_images\01a01ae7-89e0-7210-8c99-376e26753fff\exec-eb459725-ae70-4d86-8fb2-559b4a129ccc.png`.
+- Avaliação do usuário: sem identidade, estranho, pouco fofo e 3D incompatível com a plataforma.
+- Estado: descartado; não usar como mascote, referência de estilo ou evidência de qualidade.
+- Próximo gate: síntese de princípios de marca, personagem 2D e sistema visual antes de nova geração.
+
+## EVD-006 — Banca adversarial de marca e design
+
+- Três revisões independentes: estratégia de marca, personagem 2D e sistema visual de produto.
+- Convergência: lastro visível, conexão sem vigilância, ação humana, personagem como guia de rastreabilidade e interface centrada em fonte → ação.
+- Nome: TEVIA e Trama bloqueados; Entrela proposto e depois rejeitado pelo usuário.
+- Paleta: contrastes calculados e registrados em `docs/BRAND_DIRECTION_GATE.md`.
+- Estado: banca incorporada à direção final.
+
+## EVD-007 — Branding Relay v1
+
+- Nome Relay definido diretamente pelo usuário.
+- Mascote final transparente: `public/brand/relay-mascot-transparent.png`.
+- Versão chroma: `public/brand/relay-mascot-chroma.png`.
+- Estados: `public/brand/relay-mascot-states.png`.
+- Hero: `public/brand/relay-hero.png`.
+- Logo, marca, ícone, versão mono e tokens: `public/brand/`.
+- Sistema documentado: `docs/BRAND_BOOK.md`.
+- Avaliação integrada: `brand/relay-brand-board.html`.
+- Regra de escala: ilustração a partir de 96 px; símbolo/ícone abaixo disso.

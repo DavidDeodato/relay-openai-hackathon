@@ -1,0 +1,31 @@
+:root {
+  --relay-forest: #0d3b2e;
+  --relay-verdant: #116149;
+  --relay-verdant-strong: #0b4f3a;
+  --relay-canvas: #f7f9f6;
+  --relay-surface: #ffffff;
+  --relay-ink: #17201c;
+  --relay-muted: #5d6a63;
+  --relay-border: #dce4df;
+  --relay-cream: #f3f7f4;
+  --relay-action: #1d4ed8;
+  --relay-inferred: #6d28d9;
+  --relay-pending: #8a4b08;
+  --relay-blocked: #b42318;
+  --relay-font-sans: "Manrope Variable", Manrope, Inter, system-ui, sans-serif;
+  --relay-font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
+  --relay-radius-control: 6px;
+  --relay-radius-surface: 10px;
+  --relay-space-1: 4px;
+  --relay-space-2: 8px;
+  --relay-space-3: 12px;
+  --relay-space-4: 16px;
+  --relay-space-6: 24px;
+  --relay-space-8: 32px;
+  --relay-motion-control: 140ms;
+  --relay-motion-trace: 260ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --relay-motion-control: 0ms; --relay-motion-trace: 0ms; }
+}

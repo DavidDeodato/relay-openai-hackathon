@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title id="title">Relay mark</title>
+  <desc id="desc">Three source paths converge through an open loop into one action path.</desc>
+  <g fill="none" stroke="#0D3B2E" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8 25h18c12 0 14 11 22 18"/>
+    <path d="M8 48h21c8 0 12 0 18 0"/>
+    <path d="M8 71h18c12 0 14-11 22-18"/>
+    <path d="M46 43c11-15 33-8 33 9 0 14-15 21-26 13-10-7-9-23 1-30 11-8 25-2 27 10" stroke="#1D4ED8"/>
+    <path d="M78 52h10"/>
+  </g>
+  <circle cx="89" cy="52" r="4" fill="#1D4ED8"/>
+</svg>

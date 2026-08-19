@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Relay — Brand Board</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../public/brand/tokens.css" />
+  <style>
+    *{box-sizing:border-box} body{margin:0;background:var(--relay-canvas);color:var(--relay-ink);font-family:var(--relay-font-sans)}
+    main{max-width:1240px;margin:auto;padding:48px 32px 80px}.eyebrow{font:600 12px/1 var(--relay-font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--relay-verdant)}
+    h1{font-size:48px;line-height:1.04;letter-spacing:-.04em;margin:14px 0 16px;max-width:740px}p{line-height:1.6;color:var(--relay-muted)}
+    .hero{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;background:#fff;border:1px solid var(--relay-border);border-radius:16px;padding:40px}.hero img{width:100%;display:block}
+    .logo{width:280px;max-width:100%}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:48px}.panel{background:#fff;border:1px solid var(--relay-border);border-radius:12px;padding:24px}.span4{grid-column:span 4}.span6{grid-column:span 6}.span8{grid-column:span 8}.span12{grid-column:span 12}
+    h2{font-size:20px;margin:0 0 18px}.swatches{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.swatch{height:110px;border-radius:9px;padding:12px;color:#fff;font-size:12px;display:flex;align-items:flex-end}.light{color:var(--relay-ink);border:1px solid var(--relay-border)}
+    .mascot{width:100%;max-height:360px;object-fit:contain}.states{width:100%;display:block;border-radius:8px}.mark-row{display:flex;gap:24px;align-items:center}.mark-row img{width:86px;height:86px}.dark{background:var(--relay-forest);color:var(--relay-cream)}.dark p{color:#c8d5cf}.quote{font-size:28px;line-height:1.25;letter-spacing:-.025em;margin:0 0 20px}.meta{font:500 12px/1.5 var(--relay-font-mono);color:var(--relay-muted)}
+    @media(max-width:800px){main{padding:24px 16px}.hero{grid-template-columns:1fr;padding:24px}.span4,.span6,.span8{grid-column:span 12}.swatches{grid-template-columns:repeat(2,1fr)}h1{font-size:38px}}
+  </style>
+</head>
+<body><main>
+  <section class="hero">
+    <div><div class="eyebrow">Sistema de marca · v1.0</div><img class="logo" src="../public/brand/relay-logo-horizontal.svg" alt="Relay"><h1>Sua empresa lembra por que decidiu.</h1><p>Relay conecta contexto espalhado e o transforma em decisões, riscos e ações verificáveis — sem perder a fonte.</p></div>
+    <img src="../public/brand/relay-hero.png" alt="Três fontes conectadas pelo mascote Relay a uma ação rastreável">
+  </section>
+  <section class="grid">
+    <article class="panel span4"><h2>Assinaturas</h2><div class="mark-row"><img src="../public/brand/relay-mark.svg" alt="Marca Relay"><img src="../public/brand/relay-icon.svg" alt="Ícone Relay"></div><p>Sempre três entradas, um laço aberto e uma saída.</p></article>
+    <article class="panel span8"><h2>Centro cromático</h2><div class="swatches"><div class="swatch" style="background:#0D3B2E">Forest<br>#0D3B2E</div><div class="swatch" style="background:#116149">Verdant<br>#116149</div><div class="swatch light" style="background:#F7F9F6">Canvas<br>#F7F9F6</div><div class="swatch" style="background:#1D4ED8">Action<br>#1D4ED8</div></div></article>
+    <article class="panel span6"><h2>Laço Vivo</h2><img class="mascot" src="../public/brand/relay-mascot-transparent.png" alt="Mascote Relay, um laço vivo com três entradas e uma saída"><p>Guia de rastreabilidade: simpático, calmo e presente apenas quando ajuda.</p></article>
+    <article class="panel span6"><h2>Estados funcionais</h2><img class="states" src="../public/brand/relay-mascot-states.png" alt="Estados conectando, conflito, fonte ausente e ação registrada"></article>
+    <article class="panel dark span6"><div class="eyebrow" style="color:#78A0FF">Voz</div><p class="quote">“Ainda falta fonte para confirmar isso.”</p><p>Fato primeiro. Lastro visível. Incerteza honesta. Próximo passo claro.</p></article>
+    <article class="panel span6"><h2>Tipografia</h2><p style="font-size:32px;color:#17201C;margin:0 0 8px;font-weight:700">Manrope para clareza humana.</p><p class="meta">Geist Mono · SRC-014 · 19 AGO · 14:32</p></article>
+    <article class="panel span12"><h2>Regra-mãe</h2><p class="quote">fonte → evidência → interpretação → incerteza → ação humana → registro</p><p>Se uma decisão visual não reforça essa cadeia, ela não pertence à Relay.</p></article>
+  </section>
+</main></body></html>
