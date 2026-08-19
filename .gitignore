@@ -41,3 +41,4 @@ yarn-error.log*
 /work/
 /docs-site/
 /docs/relay-demo-raw.webm
+/.relay-data/
