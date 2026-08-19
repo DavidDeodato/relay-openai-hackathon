@@ -1419,9 +1419,11 @@ blockquote {
 .chat-shell {
   position: fixed;
   z-index: 45;
-  inset: 20px 20px 20px max(278px, calc(100vw - 880px));
+  inset: auto 18px 18px auto;
+  width: min(560px, calc(100vw - 36px));
+  height: min(680px, calc(100vh - 36px));
   display: grid;
-  grid-template-columns: 230px 1fr;
+  grid-template-columns: 168px minmax(0, 1fr);
   background: white;
   border: 1px solid var(--border);
   border-radius: 10px;
@@ -1644,8 +1646,10 @@ blockquote {
     border-top: 1px solid var(--border);
   }
   .chat-shell {
-    inset: 12px;
-    grid-template-columns: 210px 1fr;
+    inset: auto 14px 14px auto;
+    width: min(520px, calc(100vw - 28px));
+    height: min(640px, calc(100vh - 28px));
+    grid-template-columns: 156px minmax(0, 1fr);
   }
   .integration-grid {
     grid-template-columns: 1fr;
@@ -1678,7 +1682,9 @@ blockquote {
     grid-column: 1/-1;
   }
   .chat-shell {
-    inset: 8px;
+    inset: auto 8px 8px;
+    width: calc(100vw - 16px);
+    height: min(620px, calc(100vh - 16px));
     display: flex;
     flex-direction: column;
   }
