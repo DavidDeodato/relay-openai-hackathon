@@ -148,6 +148,17 @@ export default function RelayAppV2() {
   useEffect(() => {
     if (chatId) void loadMessages(chatId);
   }, [chatId]);
+  useEffect(() => {
+    if (chats.length)
+      localStorage.setItem("relay-chats-v2", JSON.stringify(chats));
+  }, [chats]);
+  useEffect(() => {
+    if (chatId && messages.length)
+      localStorage.setItem(
+        `relay-messages-v2:${chatId}`,
+        JSON.stringify(messages),
+      );
+  }, [chatId, messages]);
   async function refreshContext() {
     try {
       const data = await fetch("/api/context", { cache: "no-store" }).then(
@@ -166,14 +177,21 @@ export default function RelayAppV2() {
     const data = await fetch("/api/chats", { cache: "no-store" }).then((r) =>
       r.json(),
     );
-    setChats(data.chats || []);
-    if (data.chats?.length) setChatId((id) => id || data.chats[0].id);
+    const cached = JSON.parse(
+      localStorage.getItem("relay-chats-v2") || "[]",
+    ) as Chat[];
+    const next = data.chats?.length ? data.chats : cached;
+    setChats(next);
+    if (next.length) setChatId((id) => id || next[0].id);
   }
   async function loadMessages(id: string) {
     const data = await fetch(`/api/chats/${id}/messages`, {
       cache: "no-store",
     }).then((r) => r.json());
-    setMessages(data.messages || []);
+    const cached = JSON.parse(
+      localStorage.getItem(`relay-messages-v2:${id}`) || "[]",
+    ) as Message[];
+    setMessages(data.messages?.length ? data.messages : cached);
   }
   async function newChat() {
     const data = await fetch("/api/chats", {
@@ -181,7 +199,7 @@ export default function RelayAppV2() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ title: "Nova conversa" }),
     }).then((r) => r.json());
-    await refreshChats();
+    setChats((current) => [data.chat, ...current]);
     setChatId(data.chat.id);
     setMessages([]);
     setChatOpen(true);
